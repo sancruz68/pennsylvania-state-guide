@@ -1,0 +1,13 @@
+
+# Installed dependencies
+node_modules/
+
+# Test coverage
+coverage/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*

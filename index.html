@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Pennsylvania cities, local highlights, and places to visit.">
+  <title>Pennsylvania State Guide | Explore PA</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Main navigation">
+      <a class="brand" href="#home">
+        <span class="brand-icon">PA</span>
+        <span>Explore Pennsylvania</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">THE KEYSTONE STATE</p>
+
+          <h1>
+            Discover more of
+            <span>Pennsylvania.</span>
+          </h1>
+
+          <p class="hero-description">
+            From historic downtowns to modern city skylines,
+            explore destinations across Pennsylvania and find
+            somewhere new to visit.
+          </p>
+
+          <a class="primary-button" href="#destinations">
+            Explore destinations
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="hero-feature" aria-label="Guide highlights">
+          <span class="feature-label">YOUR CITY GUIDE</span>
+          <span class="feature-number">06</span>
+          <span class="feature-description">
+            Pennsylvania destinations to explore
+          </span>
+          <div class="feature-line"></div>
+          <span class="feature-bottom">
+            Search. Discover. Save.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations container" id="destinations">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">EXPLORE THE STATE</p>
+          <h2>Find your next destination</h2>
+          <p>
+            Browse Pennsylvania cities or search for
+            somewhere specific.
+          </p>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="search-field">
+          <label for="citySearch">Search cities</label>
+          <input
+            id="citySearch"
+            type="search"
+            placeholder="Search by city or keyword..."
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="region-field">
+          <label for="regionFilter">Region</label>
+          <select id="regionFilter">
+            <option value="all">All regions</option>
+            <option value="Eastern">Eastern PA</option>
+            <option value="Central">Central PA</option>
+            <option value="South Central">South Central PA</option>
+            <option value="Western">Western PA</option>
+          </select>
+        </div>
+
+        <button
+          id="savedFilter"
+          class="saved-filter"
+          type="button"
+          aria-pressed="false"
+        >
+          ☆ Saved only
+        </button>
+      </div>
+
+      <div class="results-header">
+        <p id="resultsCount" role="status">Showing destinations</p>
+        <span>Explore Pennsylvania</span>
+      </div>
+
+      <div class="city-grid" id="cityGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>No destinations found</h3>
+        <p>Try another search or change your filters.</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container about-content">
+        <div>
+          <p class="eyebrow dark">ABOUT THE PROJECT</p>
+          <h2>Explore Pennsylvania in one place.</h2>
+        </div>
+
+        <p>
+          Pennsylvania State Guide is an interactive website
+          built with HTML, CSS, and JavaScript. Browse different
+          cities, filter by region, and save destinations that
+          interest you.
+
+          This project focuses on responsive web design,
+          JavaScript functionality, and creating an accessible
+          browsing experience.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="cityDialog" class="city-dialog" aria-labelledby="dialogTitle">
+    <div class="dialog-content">
+      <button
+        type="button"
+        id="closeDialog"
+        class="close-button"
+        aria-label="Close destination details"
+      >×</button>
+
+      <p id="dialogRegion" class="eyebrow dark"></p>
+      <h2 id="dialogTitle"></h2>
+      <p id="dialogDescription"></p>
+
+      <h3>Highlights</h3>
+      <ul id="dialogHighlights"></ul>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>Explore Pennsylvania</span>
+      <span>Built with HTML, CSS & JavaScript</span>
+    </div>
+  </footer>
+</body>
+</html>
